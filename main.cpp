@@ -1,6 +1,13 @@
-#include <iostream>
+#include "fs_operations.h"
+
 
 int main(){
-    std::cout << getenv("TOKEN_TG");
+
+    auto token = bot::fs_operations::get_token(std::filesystem::path("../TOKEN.TG"));
+    if (token.empty()) {
+        std::cerr << "[ERROR] token reading error";
+        return 1;
+    }
+    std::cout << "[TOKEN]\t" << token;
     return 0;
 }
