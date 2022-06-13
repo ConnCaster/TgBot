@@ -1,5 +1,5 @@
 #include "fs_operations.h"
-
+#include <tgbot/tgbot.h>
 
 int main(){
 
@@ -9,5 +9,6 @@ int main(){
         return 1;
     }
     std::cout << "[TOKEN]\t" << token;
+//    TgBot::Bot bot(token);
     return 0;
 }
